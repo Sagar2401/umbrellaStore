@@ -1,0 +1,92 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.mainContainer {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+#leftBox {
+  flex: 1.5;
+}
+
+#img_umbrella {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#logo_umbrella {
+  position: absolute;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo-bottom {
+  width: 18%;
+  height: 20%;
+}
+
+/* right box  */
+
+#rightBox {
+  flex: 1;
+}
+
+#infoBox {
+  display: flex;
+  flex-direction: column;
+}
+
+#colorBadge {
+  display: flex;
+  flex-direction: row;
+}
+
+#headingone {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+#headingtwo {
+  font-size: 17px;
+}
+
+#headingthree {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+#imageUpload {
+  display: flex;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+}
+
+#imageSvg {
+  margin: 0px 25px;
+}
+
+/* responsiveness for 720pixels */
+
+@media (min-width: 320px) and (max-width: 720px) {
+  .mainContainer {
+    display: block;
+  }
+  #rightBox {
+    width: 100%;
+  }
+  #leftBox {
+    width: 100%;
+  }
+}
