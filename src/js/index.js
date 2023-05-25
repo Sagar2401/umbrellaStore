@@ -1,11 +1,27 @@
-const colors = ["lightBlue", "pink", "yellow", "black", "red"];
+const colors = ["lightBlue", "Pink", "Yellow", "black", "Red"];
 
 const handleColor = (color) => {
+  console.log("clicked");
   let umbrella = document.getElementById("umbrella_img");
+  let loader = document.getElementById("loader");
+  let logo = document.getElementById("logo_umbrella");
 
-  let UploadDiv = document.getElementById("imageUpload");
+  umbrella.style.display = "none"
+  logo.style.display = "none"
+  loader.style.display = "flex"
+  loader.style.fill = color
+  UploadDiv = document.getElementById("imageUpload");
   UploadDiv.style.backgroundColor = `${color}`;
-  umbrella.src = `/Public/${color} umbrella.png`;
+  setTimeout(() => {
+    umbrella.style.display = "flex"
+    logo.style.display = "flex"
+    loader.style.display = "none"
+    umbrella.src = `/Public/${color} umbrella.png`;
+  }, 2000)
+
+
+
+
   console.log(color);
 };
 
@@ -31,7 +47,8 @@ const imageUpload = document.getElementById("imageUpload");
 const logoBottom = document.getElementById("logo-bottom");
 
 imageUpload.addEventListener("click", () => {
-  console.log("clicked");
+
+  console.log("clickedbutton");
   const fileInput = document.createElement("input");
 
   fileInput.type = "file";
